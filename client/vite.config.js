@@ -8,6 +8,11 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [react()],
     server: {
+      host: true,
+      allowedHosts: [
+        ".trycloudflare.com",
+        "hold-submitted-involvement-worked.trycloudflare.com",
+      ],
       port: 5173,
       proxy: {
         "/api": {
